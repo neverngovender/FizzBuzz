@@ -12,6 +12,9 @@
             if (number % 5 == 0)
                 result += "Buzz";
 
+            if (string.IsNullOrWhiteSpace(result))
+                result = number.ToString();
+
             return result;
         }
     }
