@@ -25,5 +25,15 @@ namespace FizzBuzz.Test
             var result = FB.DetermineResult(number);
             Assert.AreEqual(expected, result);
         }
+
+        [TestCase("FizzBuzz", 15)]
+        [TestCase("FizzBuzz", 30)]
+        [TestCase("FizzBuzz", 60)]
+        [TestCase("FizzBuzz", 120)]
+        public void Given_a_number_divisable_by_3_and_5_function_will_return_FizzBuzz(string expected, int number)
+        {
+            var result = FB.DetermineResult(number);
+            Assert.AreEqual(expected, result);
+        }
     }
 }
